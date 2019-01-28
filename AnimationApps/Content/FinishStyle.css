@@ -1,0 +1,100 @@
+﻿     * {
+        font-family: 'Roboto', sans-serif;
+     }
+        .dp-scroll-wrapper{
+            position: fixed;
+            width: 100%;
+            top: 100px;
+            left: 0;
+            margin-left: 0;
+            z-index: 9999;
+        }
+        .dp-scroll-text p {
+            margin: 0px;
+            font-size: 50px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+            opacity: 0;
+            margin-top: 0;
+        }
+        .dp-scroll-text {
+            height: 350px;
+        }
+        body {
+            background: #018786;
+        }
+        .dp-scroll-text :nth-child(1){
+            opacity: 1; transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0) ;
+        }
+        .dp-scroll-text :nth-child(2){
+            opacity: 0.75; transform: translate(0%, 100%) matrix(0.9, 0, 0, 0.9, 0, 0) ;
+        }
+        .dp-scroll-text :nth-child(3){
+            opacity: 0.5; transform: translate(0%, 200%) matrix(0.8, 0, 0, 0.8, 0, 0) scale(0.8, 0.8) ;
+        }
+        .dp-scroll-text :nth-child(4){
+            opacity: 0.25; transform: translate(0%, 300%) matrix(0.7, 0, 0, 0.7, 0, 0) scale(0.7, 0.7) ;
+        }
+        .dp-scroll-text :nth-child(5){
+            opacity: 0; transform: translate(0%, 400%) matrix(0.5, 0, 0, 0.5, 0, 0) ;
+        }
+        .dp-animate-hide,
+        .dp-animate-1,
+        .dp-animate-2,
+        .dp-animate-3,
+        .dp-animate-4{
+         opacity: 1;
+         animation-duration: 1s;
+         animation-fill-mode: both;
+         animation-timing-function: linear;
+        }
+        .dp-scroll-text .dp-animate-hide{
+            animation-name: movehide;
+
+        }
+        .dp-scroll-text .dp-animate-1{
+            animation-name:move1;
+                  }
+        .dp-scroll-text .dp-animate-2{
+            animation-name:move2;
+
+        }
+        .dp-scroll-text .dp-animate-3{
+            animation-name:move3;
+
+        }
+        .dp-scroll-text .dp-animate-4{
+            animation-name:move4;
+        }
+
+
+         @keyframes movehide {
+         100% {
+            opacity: 0; transform: translate(0%, -165%) matrix(1.2, 0, 0, 1.2, 0, 0);
+             }
+        }
+        @keyframes move1 {
+         100% {
+            opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);
+             }
+        }
+         @keyframes move2 {
+         100% {
+            opacity: 0.75; transform: translate(0%, 100%) matrix(0.9, 0, 0, 0.9, 0, 0);
+             }
+        }
+         @keyframes move3 {
+         100% {
+            opacity: 0.5; transform: translate(0%, 200%) matrix(0.7, 0, 0, 0.7, 0, 0);
+             }
+        }
+        @keyframes move4 {
+         100% {
+            opacity: 0.25; transform: translate(0%, 300%) matrix(0.5, 0, 0, 0.5, 0, 0);
+             }
+        }

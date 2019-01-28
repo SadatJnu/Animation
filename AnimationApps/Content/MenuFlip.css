@@ -1,0 +1,255 @@
+/*------------ Color Palette ------------*/
+/*
+LIGHT ORANGE: #e4644b
+DARK ORANGE: #d05942
+LIGHT BLUE: #40529B
+DARK BLUE: #263A8D
+LIGHT TEAL: #008080;
+DARK TEAL: #006868; 
+DARK BROWN: #484141
+Menu text: #f7f1e3
+Submenu text: #ae9f9f
+*/
+
+/*------------ General Settings ------------*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .2px;
+  background: linear-gradient(135deg, lightsteelblue, lightblue);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+ul {
+  width: 276px;
+  list-style: none;
+}
+
+li { cursor: pointer; }
+
+/*------------ Themes ------------*/
+
+.blue { background-color: #40529B; }
+
+.blue-border { border-top: 1px solid #263A8D; }
+
+.teal { background-color: #008080; }
+
+.teal-border { border-top: 1px solid #006868; }
+
+/*------------ Power Card ------------*/
+
+.power {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -46px;
+  width: 92px;
+  height: 92px;
+  margin-top: -46px;
+  cursor: pointer;
+  background: url('../../Content/Images/powerup.png') top center no-repeat;
+}
+
+.power:hover { background: url('../../Content/Images/powerdown.png') top center no-repeat; }
+
+.powerdown {
+  background: url('../../Content/Images/powerdown.png') top center no-repeat;
+  display: hidden;
+}
+
+/*------------ Main Menu ------------*/
+
+.mainmenu {
+  font-size: 16px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 5px 10px rgba(0,0,0,.35);
+  border-radius: 7px;
+}
+
+.mainmenu > li {
+  box-sizing: border-box;
+  height: 48px;
+  color: #f7f1e3;
+}
+
+.mainmenu > li:first-child {
+  border-top: 0;
+  border-radius: 7px 7px 0 0;
+}
+
+.mainmenu > li:last-child { border-radius: 0 0 7px 7px; }
+
+.mainmenu > li span {
+  line-height: 48px;
+  display: block;
+}
+
+.mainmenu > li .icon {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  padding: 14px 20px 0 20px;
+}
+
+.mainmenu > li .messages {
+  font-size: 11px;
+  line-height: 19px;
+  display: block;
+  float: right;
+  width: 34px;
+  height: 18px;
+  margin-top: -33px;
+  margin-right: 19px;
+  padding: 0;
+  text-align: center;
+  background: url("../../Content/Images/messages.png") no-repeat;
+}
+
+.expand-triangle {
+  width: 276px;
+  height: 10px;
+  content: " ";
+  margin-left: -40px;
+}
+
+.expand-triangle img {
+  width: inherit;
+  height: inherit;
+  vertical-align: top;
+}
+
+/*------------ Sub Menu ------------*/
+
+.submenu {
+  font-size: 13px;
+  box-sizing: border-box;
+  content: " ";
+  color: #ae9f9f;
+}
+
+.submenu li {
+  line-height: 20px;
+  height: 35px;
+  margin-left: -40px;
+  padding-top: 11px;
+  transition: border-left 220ms ease-in;
+  border-left: solid 6px #484141;
+  background-color: #484141;
+}
+
+.submenu .chosen, .submenu .chosen:hover { border-left: solid 6px #96d145; }
+
+.submenu li:hover { border-left: solid 6px #ae9f9f; }
+
+.submenu li span { margin-left: 30px; }
+
+/*------------ 3D --------------*/
+
+#viewport {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  width: 276px;
+  height: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -138px;
+}
+
+#card {
+  -webkit-transform-style: preserve-3D;
+  -moz-transform-style: preserve-3D;
+  transform-style: preserve-3D;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+#card > div {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+#front {
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  transform: translateZ(1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.35);
+}
+
+#back {
+  -webkit-transform: translateZ(-1px) rotateY(180deg);
+  -moz-transform: translateZ(-1px) rotateY(180deg);
+  transform: translateZ(-1px) rotateY(180deg);
+}
+
+#front, #back {
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip {
+  -webkit-animation: animate 400ms forwards ease-in-out;
+  -moz-animation: animate 400ms forwards ease-in-out;
+  animation: animate 400ms forwards ease-in-out;
+}
+ @-webkit-keyframes 
+animate {  to {
+-webkit-transform: rotateY(-180deg);
+}
+
+from { -webkit-transform: rotateY(0deg); }
+}
+ @-moz-keyframes 
+animate {  to {
+-moz-transform: rotateY(-180deg);
+}
+
+from { -moz-transform: rotateY(0deg); }
+}
+ @keyframes 
+animate {  to {
+transform: rotateY(-180deg);
+}
+
+from { transform: rotateY(0deg); }
+}
+
+.flipback {
+  -webkit-animation: animateback 400ms forwards ease-in-out;
+  -moz-animation: animateback 400ms forwards ease-in-out;
+  animation: animateback 400ms forwards ease-in-out;
+}
+ @-webkit-keyframes 
+animateback {  to {
+-webkit-transform: rotateY(0deg);
+}
+
+from { -webkit-transform: rotateY(-180deg); }
+}
+ @-moz-keyframes 
+animateback {  to {
+-moz-transform: rotateY(0deg);
+}
+
+from { -moz-transform: rotateY(-180deg); }
+}
+ @keyframes 
+animateback {  to {
+transform: rotateY(0deg);
+}
+
+from { transform: rotateY(-180deg); }
+}

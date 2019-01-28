@@ -1,0 +1,67 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+.displayBox {
+	border: 1px solid black;
+	border-radius: 6px;
+    width: 200px;
+	height: 300px;
+	margin: 0px auto 10px auto;
+	padding: 0px;
+	position: relative;
+	background-color: #efefef;
+	box-shadow: 5px 5px 3px #888888;
+}
+
+.header {
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 1px solid white;
+	width: 100%;
+	color: #fff;
+	background-color: #130e5a;
+}
+
+.header h1 {
+	margin: 0px;
+	padding: 5px 0px;
+}
+
+#textPopup {		/*When attaching popups to text menus, style text menu separately*/
+	display: inline-block;
+	font-size: 28px;
+	color: DarkBlue;
+	text-align: center;
+	margin: 0px 0px 0px 65px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	cursor: pointer;
+}
+
+.very-happy, .happy, .neutral, .unhappy, .upset {
+	font-size: 256px !important;
+	background-color: #666;
+	cursor: pointer;
+}
+
+.very-happy {
+	color: yellow;
+}
+
+.happy {
+	color: orange;
+}
+
+.neutral {
+	color: #af9292;
+}
+
+.unhappy {
+	color: DarkRed;
+}
+
+.upset {
+	color: red;
+}

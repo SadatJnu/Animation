@@ -1,0 +1,29 @@
+﻿body {
+        margin: 0;
+        padding: 0;        
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 10em;
+        letter-spacing: 0.7;
+        background: url(../../Content/Images/9.jpg);
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate 5s linear infinite;
+    }
+
+       @keyframes animate {
+              0% {
+                  background-position: 0% 0%;
+              }
+              50% {
+                  background-position: 40% 30%;
+              }
+             100% { 
+                  background-position: 100% 100%;
+              }
+          }
+

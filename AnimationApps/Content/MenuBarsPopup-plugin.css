@@ -1,0 +1,420 @@
+/*Colour themes and settings**********************************************/
+/*CUSTOM THEME*************************************************************/
+.popupThemecustom { /*Change these settings to set up a custom theme*/
+    background-color: #fffe00 !important;
+    color: #333 !important;
+}
+
+.popupThemecustom i {
+    color: #333 !important;
+}
+
+.popupThemecustom i:hover {
+    background-color: #ead700 !important;
+}
+
+.pop-cont.pop-top.popupThemecustom::after {
+    border-color: #fffe00 transparent transparent transparent !important;
+}
+
+.pop-cont.pop-bottom.popupThemecustom::before {
+    border-color: transparent transparent #fffe00 transparent !important;
+}
+
+.pop-cont.pop-left.popupThemecustom::after {
+    border-color: transparent transparent transparent #fffe00!important;
+}
+
+.pop-cont.pop-right.popupThemecustom::before {
+    border-color: transparent #fffe00 transparent transparent !important;
+}
+
+/*Default theme**************/
+.popupTheme {
+    background-color: #333;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0;
+    position: relative;
+    box-shadow: 5px 5px 3px #888888;
+    z-index: 1;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.popupTheme i, .popupThemered i, .popupThemeblue i, .popupThemegreen i, .popupThemecustom i {
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.popupTheme i:hover {
+    background-color: #4d4d4d;
+}
+
+/*Blue theme*****************/
+.popupThemeblue {
+    background-color: #02baf2;
+}
+
+.popupThemeblue i {
+/*    background-color: #02baf2;*/
+}
+
+.popupThemeblue i:hover {
+    background-color: DarkBlue;
+}
+
+/*Red theme******************/
+.popupThemered {
+    background-color: #d80808;
+}
+
+.popupThemered i {
+  /*  background-color: #d80808;*/
+}
+
+.popupThemered i:hover {
+    background-color: DarkRed;
+}
+
+/*Green theme****************/
+.popupThemegreen {
+    background-color: #22bfa1;
+}
+
+.popupThemegreen i {
+ /*    background-color: #22bfa1;*/
+}
+
+.popupThemegreen i:hover {
+     background-color: #38938c;
+}
+
+/*Popup arrow theme and settings********************************************/
+.pop-cont.pop-top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    z-index: 100;
+}
+
+.pop-cont.pop-bottom::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    z-index: 100;
+}
+
+.pop-cont.pop-left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+    z-index: 100;
+}
+
+.pop-cont.pop-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    margin-top: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+    z-index: 100;
+}
+
+/*Blue theme**************************************************************/
+.pop-cont.pop-top.popupThemeblue::after {
+    border-color: #02baf2 transparent transparent transparent;
+}
+
+.pop-cont.pop-bottom.popupThemeblue::before {
+    border-color: transparent transparent #02baf2 transparent !important;
+}
+
+.pop-cont.pop-left.popupThemeblue::after {
+    border-color: transparent transparent transparent #02baf2!important;
+}
+
+.pop-cont.pop-right.popupThemeblue::before {
+    border-color: transparent #02baf2 transparent transparent !important;
+}
+/*Red theme***************************************************************/
+.pop-cont.pop-top.popupThemered::after {
+    border-color: #d80808 transparent transparent transparent;
+}
+
+.pop-cont.pop-bottom.popupThemered::before {
+    border-color: transparent transparent #d80808 transparent !important;
+}
+
+.pop-cont.pop-left.popupThemered::after {
+    border-color: transparent transparent transparent #d80808!important;
+}
+
+.pop-cont.pop-right.popupThemered::before {
+    border-color: transparent #d80808 transparent transparent !important;
+}
+/*Green theme*************************************************************/
+.pop-cont.pop-top.popupThemegreen::after {
+    border-color: #22bfa1 transparent transparent transparent;
+}
+
+.pop-cont.pop-bottom.popupThemegreen::before {
+    border-color: transparent transparent #22bfa1 transparent !important;
+}
+
+.pop-cont.pop-left.popupThemegreen::after {
+    border-color: transparent transparent transparent #22bfa1!important;
+}
+
+.pop-cont.pop-right.popupThemegreen::before {
+    border-color: transparent #22bfa1 transparent transparent !important;
+}
+
+/*Popup menu container********************************************************/
+.pop-cont {
+    margin: auto;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 5px 5px 3px #888888;
+}
+
+.pop-cont, .pop-item, .popupTheme {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/*Individual menu item*/
+.pop-item {
+    height: 100%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    float: left;
+}
+
+.item-side {
+    float: none !important;
+}
+
+.pop-item i {
+    margin: -10px 0 0 -10px;
+}
+
+/*Position of the popup*******************************************************/
+.pop-top {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.pop-bottom {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.pop-left {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -7px;
+}
+
+.pop-right {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -7px;
+}
+
+/*Animation classes and rules*************************************************/
+.animate-standard {
+    -webkit-animation: animateStandard 0.3s 1 ease;
+    animation: animateStandard 0.3s 1 ease;
+}
+
+@-webkit-keyframes animateStandard {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animateStandard {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/************************************************/
+.animate-grow {
+  -webkit-animation: animateGrow 0.4s 1 ease;
+}
+
+@-webkit-keyframes animateGrow {
+  0% {
+    transform: scale(0) translateY(40px);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.5) translate(0px);
+  }
+  100% {
+    transform: scale(1) translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animateGrow {
+  0% {
+    transform: scale(0) translateY(40px);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.5) translate(0px);
+  }
+  100% {
+    transform: scale(1) translate(0px);
+    opacity: 1;
+  }
+}
+/************************************************/
+.animate-flip {
+  -webkit-animation: animateFlip 0.4s 1 ease;
+}
+
+@-webkit-keyframes animateFlip {
+  from {
+    transform: rotate3d(2, 2, 2, 180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes animateFlip {
+  from {
+    transform: rotate3d(2, 2, 2, 180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
+  }
+}
+/***************************************************/
+.animate-bounce {
+  -webkit-animation: animateBounce 0.4s 1 ease-out;
+}
+
+@-webkit-keyframes animateBounce {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animateBounce {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/*Styling for the different menu item's borders****************************/
+.leftBorder {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.rightBorder {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.bottomBorder {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.topBorder {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/*Keeps popup menus hidden until needed****************************************/
+.hidden {
+    display: none !important;
+}
+
+.clear {
+    clear: both;
+}

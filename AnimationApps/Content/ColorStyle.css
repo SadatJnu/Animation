@@ -1,0 +1,33 @@
+﻿
+body {
+        background-color: #000;
+    }
+
+    body h1 {
+        margin:0;
+        padding:0;
+        font-family:Arial;        
+    }
+    .text-container h1 {
+        font-size: 140px;
+        color: rgba(225,225,225,.1);
+        background-image: url(../../Content/Images/download.jpg);
+        background-repeat: repeat-x;
+        -webkit-background-clip: text;
+        animation: color 15s linear infinite;
+    }
+
+    .text-container {
+        margin-top:17%;
+        text-align:center;
+    }
+
+     @keyframes color {
+              0% {
+                  background-position: left 0px top 10px;
+              }
+              40% {
+                  background-position: left 800px top 10px;
+              }
+             
+          }
