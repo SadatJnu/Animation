@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Sidebar";
+}
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="~/Content/Sidebar.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+
+    <button class="btn-nav">
+        <div class="bar arrow-top-r"></div>
+        <div class="bar arrow-middle-r"></div>
+        <div class="bar arrow-bottom-r"></div>
+    </button>
+
+    <nav class="nav-container hidden hideNav">
+        <ul class="nav-list">
+            <li class="list-item"><a href="#"><i class="fa fa-home"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fa fa-credit-card-alt"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fa fa-usb"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fa fa-edge"></i></a></li>
+            <li class="list-item"><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        $(window).load(function () {
+            $(".btn-nav").on("click tap", function () {
+                $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+                $(this).toggleClass("animated");
+            });
+        });
+    </script>
+    

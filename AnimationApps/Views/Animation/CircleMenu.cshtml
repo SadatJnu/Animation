@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "CircleMenu";
+}
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="~/Content/circlemenu.css" rel="stylesheet" />
+
+<script src="~/Scripts/CircleMenu_lodash.min.js"></script>
+<script src="~/Scripts/SideNav_TweenMax.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/circlemenu.js"></script>
+<script src="~/Scripts/circlemenu_site.js"></script>
+
+
+    <style type="text/css">
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #333;
+        }
+
+        h1 {
+            margin: 150px auto 30px auto;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+
+    <div class="wrap">
+        <div id="my-circle-menu" class="cm-container">
+            <ul class="cm-items"></ul>
+            <div class="cm-selected-container">
+                <div class="cm-selected-label">
+                    <span><!-- Menu Pertama --></span>
+                </div>
+                <a class="cm-button cm-button-prev" type="button" title="Previous"><i class="fa fa-chevron-left"></i></a>
+                <a class="cm-button cm-button-next" type="button" title="Next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+   

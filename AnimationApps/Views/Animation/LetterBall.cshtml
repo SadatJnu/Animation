@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "LetterBall";
+}
+
+         <canvas id="myCanvas"></canvas> 
+
+
+            <script src="~/Scripts/LetterBall_alphabet.js"></script>   
+            <script src="~/Scripts/LetterBall_bubbles.js"></script>
+            <script src="~/Scripts/LetterBall.js"></script>
+
+    <script>
+        var red = [0, 100, 63];
+        var orange = [40, 100, 60];
+        var green = [75, 100, 40];
+        var blue = [196, 77, 55];
+        var purple = [280, 50, 60];
+        var black = [38, 100, 0];
+        var ryb = [0, 59, 25];
+        var ext = [121, 77, 29];
+
+        var myName = "BANGLADESH";
+        letterColors = [red, orange, green, blue, purple, black, ryb, ext];
+        bubbleShape = "circle";
+
+
+        drawName(myName, letterColors);
+        bounceBubbles();
+    </script>

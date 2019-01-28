@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "DockMenu";
+}
+
+  <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #main {            
+            text-align: center;           
+        }
+
+        .main-nav-list {
+            display: inline-block;
+            padding: 0;
+            list-style: none;
+        }
+
+            .main-nav-list li {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                min-width: 50px;
+                min-height: 50px;
+            }
+
+                .main-nav-list li.habitats {
+                    background-color: #9ae900;
+                }
+
+                .main-nav-list li.animals {
+                    background-color: #00cb79;
+                }
+
+                .main-nav-list li.materials {
+                    background-color: #ffd600;
+                }
+
+                .main-nav-list li.earth {
+                    background-color: #ffa200;
+                }
+
+                .main-nav-list li.forces {
+                    background-color: #ff2200;
+                }
+
+                .main-nav-list li.evolution {
+                    background-color: #a8218e;
+                }
+
+                .main-nav-list li.light {
+                    background-color: #00a7ef;
+                }
+
+                .main-nav-list li.electricity {
+                    background-color: #00989a;
+                }
+
+                .main-nav-list li img {
+                    display: inline-block;
+                    cursor: pointer;
+                    margin: 0;
+                    padding: 0;
+                }
+    </style>
+
+<body>
+    <nav class="main-nav" id="main">
+        <ul class="main-nav-list">
+            <li class="evolution"><img src="../../Content/Images/main-nav-evolution@2x.png" alt="Evolution and inheritance" title="Evolution and inheritance"></li>
+            <li class="light"><img src="../../Content/Images/main-nav-light@2x.png" alt="Light" title="Light"></li>
+            <li class="earth"><img src="../../Content/Images/main-nav-earth@2x.png" alt="Earth and space" title="Earth and space"></li>
+            <li class="habitats"><img src="../../Content/Images/main-nav-habitats@2x.png" alt="Living things and their habitats" title="Living things and their habitats"></li>
+            <li class="forces"><img src="../../Content/Images/main-nav-forces@2x.png" alt="Forces" title="Forces"></li>
+            <li class="animals"><img src="../../Content/Images/main-nav-animals@2x.png" alt="Animals, including humans" title="Animals, including humans"></li>
+            <li class="electricity"><img src="../../Content/Images/main-nav-electricity@2x.png" alt="Electricity" title="Electricity"></li>
+            <li class="materials"><img src="../../Content/Images/main-nav-materials@2x.png" alt="Properties and changes of materials" title="Properties and changes of materials"></li>
+        </ul>
+    </nav>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/DockMenu.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.main-nav-list img').resizeOnApproach({
+                elementDefault: 50,
+                elementClosest: 120,
+                triggerDistance: 300
+            });
+        });
+    </script>
+
+</body>
+

@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "DropdownMenu";
+}
+
+<link href="~/Content/jquerysctipttop.css" rel="stylesheet" />
+<link href="~/Content/CanvasMenu_normalize.css" rel="stylesheet" />
+<link href="~/Content/DropdownMenu.css" rel="stylesheet" />
+
+
+    <nav class="site-navigation" role="navigation" aria-label="Main Navigation">
+        <ul class="nav">
+            <li class="menu-item active"><a href="#">Home</a></li>
+            <li class="menu-item-has-children">
+                <a href="#">Categories</a>
+                <ul class="sub-menu">
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">Vue.js</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#fallback-page">Featured</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Directives</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">About</a></li>
+            <li class="menu-item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <script src="~/Scripts/SideNav_jquery-1.12.4.min.js"></script>
+
+    <script>
+        (function () {
+            var $allMenus = $(".menu-item-has-children");
+            var $allToggles = $allMenus.find('> a');
+            var $allTopLinks = $(".nav > li > a");
+
+            var hoverTimer, blurTimer,
+                delay = 500;
+
+            // Reusable functions
+            function openMenu($current) {
+                $allToggles.attr("aria-expanded", "false");
+                $current.attr("aria-expanded", "true");
+            }
+
+            function closeMenu($current) {
+                $current.attr("aria-expanded", "false");
+            }
+
+            function focusSubmenu($current) {
+                $current.on("transitionend", function () {
+                    if ($current.css("visibility") === "visible") {
+                        $current.find("li:first-child a").focus();
+                        $current.off("transitionend");
+                    }
+                });
+            }
+
+            // Add aria roles
+            $(".menu-item.active > a").attr("aria-current", "page");
+            $allToggles.attr({
+                "aria-haspopup": "true",
+                "aria-expanded": "false",
+                "role": "button"
+            });
+
+            // Open menu on hover
+            $allMenus.on("mouseenter", function (e) {
+                openMenu($(this).find("[aria-expanded]"));
+
+                clearTimeout(hoverTimer);
+            });
+
+            // Close menu after a short delay
+            $allMenus.on("mouseleave", function () {
+                $element = $(this).find("[aria-expanded]");
+
+                hoverTimer = setTimeout(function () {
+                    closeMenu($element);
+                }, delay);
+            });
+
+            // Toggle menu on click, tap, or focus + enter/space
+            $allToggles
+              .on("click touchstart", function (e) {
+                  $this = $(this);
+                  $submenu = $this.next(".sub-menu");
+
+                  if ($this.attr("aria-expanded") === "true") closeMenu($this);
+                  else openMenu($this);
+
+                  focusSubmenu($submenu);
+
+                  e.preventDefault();
+              })
+              .on("keyup", function (e) {
+                  if (e.keyCode === 32) {
+                      openMenu($(this));
+                      focusSubmenu($(this).next(".sub-menu"));
+                  }
+              });
+
+            // Close menu when refocusing on top-level links
+            $allTopLinks.on("focus", function () {
+                closeMenu($allToggles);
+            });
+
+            // Close menu on esc and focus loss
+            $(".site-navigation").on("keyup", function (e) {
+                if (e.keyCode === 27) closeMenu($allToggles);
+            });
+
+            // Close menu if focus isn't inside site navigation
+            $('.sub-menu').on('focusout', function () {
+                // There's a delay between focusout and re-focus
+                setTimeout(function () {
+                    $focused = $(document.activeElement);
+                    if ($focused.closest('.site-navigation').length === 0) {
+                        closeMenu($allToggles);
+                    }
+                   },
+                1);
+            });
+
+        })();
+    </script>
+   

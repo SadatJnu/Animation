@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "SideNav";
+}
+
+<link href="~/Content/SideNavGoogleRobotFont.css" rel="stylesheet" />
+<link href="~/Content/sideNavi.css" rel="stylesheet" />
+<link href="~/Content/SideNavApp.css" rel="stylesheet" />
+<link href="~/Content/SideNavAnimate.css" rel="stylesheet" />
+<link href="~/Content/SideNav_fullpage.min.css" rel="stylesheet" />
+
+<script src="~/Scripts/SideNav_jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/SideNav_TweenMax.min.js"></script>
+<script src="~/Scripts/SideNav_fullpage.min.js"></script>
+<script src="~/Scripts/SideNav.js"></script>
+
+
+    <section class="km-side-navi" id="exampleSide"></section>
+    <div id="fullpage">
+        <div class="section">
+            <div class="m-inner-wrap">
+                <h2>Animate</h2>
+            </div>
+        </div>
+        <div class="section">
+            <div class="m-inner-wrap">
+                <h2>Nice</h2>
+            </div>
+        </div>
+        <div class="section">
+            <div class="m-inner-wrap">
+                <h2>Customize</h2>
+            </div>
+        </div>
+        <div class="section">
+            <div class="m-inner-wrap">
+                <h2>Friendly</h2>
+            </div>
+        </div>
+    </div>
+
+<script>
+    $(document).ready(function () {
+        var options = {
+            menu: ['Animate', 'Nice', 'Customize', 'Friendly'],
+            position: 'right',
+            themeColor: '#1ed1dc',
+            id: 'exampleSide',
+            afterInit: function () {
+                var currentIndex = parseInt($('#fullpage').find('.fp-section.active').attr('data-anchor'));
+                sidenav.activeMenuAndTag(currentIndex);
+            }
+        }
+        var sidenav = new SideNavi(options);
+        $('#fullpage').fullpage({
+            sectionsColor: ['#f5f7f9', '#eeefff', '#fff', '#eee'],
+            anchors: ['1', '2', '3', '4', '5'],
+            onLeave: function (index, nextIndex) {
+                sidenav.activeMenuAndTag(nextIndex);
+            },
+            afterLoad: function (index) {
+                var loadedSection = $(this);
+                switch (index) {
+                    case 1: loadedSection.find('h2').addClass('animated fadeInUp');
+                        break;
+                    case 2: loadedSection.find('h2').addClass('animated rotateIn');
+                        break;
+                    case 3: loadedSection.find('h2').addClass('animated rotateInDownLeft');
+                        break;
+                    case 4: loadedSection.find('h2').addClass('animated rotateInUpRight');
+                        break;
+                }
+
+            }
+        });
+    });
+</script>

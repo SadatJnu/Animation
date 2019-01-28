@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "EditableTable";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/jquerysctipttop.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+
+<script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/EditableTable.js"></script>
+<script src="~/Scripts/EditableTable_popper.min.js"></script>
+<script src="~/Scripts/show_ads.js"></script>
+
+
+    <div id="app" style="margin:150px auto">
+        <main class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Editable Bootstrap Table Demo</div>
+                            <div class="card-body">
+                                <button class="btn btn-primary" id="submit_data">Submit</button><br /><br />
+                                <table class="table table-responsive-md table-sm table-bordered" id="makeEditable">
+                                    <thead>
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Default</td>
+                                            <td>Defaultson</td>
+                                            <td>def@somemail.com</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Success</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>Danger</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>Info</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>Warning</td>
+                                            <td>Refs</td>
+                                            <td>bo@example.com</td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>Active</td>
+                                            <td>Activeson</td>
+                                            <td>act@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span style="float:right"><button id="but_add" class="btn btn-danger">Add New Row</button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+<script>
+
+    $(function () {
+        $('#makeEditable').SetEditable({ $addButton: $('#but_add') });
+
+        $('#submit_data').on('click', function () {
+            var td = TableToCSV('makeEditable', ',');
+            console.log(td);
+            var ar_lines = td.split("\n");
+            var each_data_value = [];
+            for (i = 0; i < ar_lines.length; i++) {
+                each_data_value[i] = ar_lines[i].split(",");
+            }
+
+            for (i = 0; i < each_data_value.length; i++) {
+                if (each_data_value[i] > 1) {
+                    console.log(each_data_value[i][2]);
+                    console.log(each_data_value[i].length);
+                }
+            }
+        });
+    });
+
+</script>
+

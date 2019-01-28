@@ -1,0 +1,202 @@
+﻿
+@{
+    ViewBag.Title = "ScrollAnimation";
+}
+                <link href="~/Content/ScrollAnimation.min.css" rel="stylesheet" />
+                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+                <script src="~/Scripts/jquery.scrollAnimations.js"></script>
+                <script src="~/Scripts/show_ads.js"></script>
+               
+<style type="text/css">
+        html,
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+       
+        [data-animation] {
+            opacity: 0;
+        }
+
+            [data-animation].animated {
+                opacity: 1;
+            }
+
+        #hero {
+            background: radial-gradient(circle at 50% center, #dee294 0%, #b7bd32 70%);
+            height: 100vh;
+            text-align: center;
+        }
+
+            #hero h1 small {
+                font-size: 50%;
+            }
+
+        .table-wrap {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #lower {
+            background: radial-gradient(circle at 50% center, #f0c916 0%, #ccad1a 70%);
+            overflow: hidden;
+            text-align: center;
+            min-height: 600px;
+            padding: 150px 0;
+        }
+
+            #lower img {
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+            }
+
+    .img-responsive {
+        display: block;
+        height: 290px;
+        max-width: 350px;
+    }
+
+    </style>
+
+    <section id="hero">
+        <div class="table-wrap">
+            <div class="table-cell">
+                <h1 class="heading" data-animation="fadeInUp" style="margin-top: 10px;">
+                    Sopno Ghera Meger Kole Amar Jaoa Asa.<br />
+                    Shisir Veja Dokhina Bayu Amar Valobasha,<br />
+                    Nodir Pare Shanto Bikal Shital Kore Mon,<br />
+                    R Keu Noy Sei Ami, Tomar Aponjon.       <br /><br />
+
+                    Bondhu Mane Kede Buk Fatiye Hasha,          <br />
+                    Bondhu Mane Amar Kache Onek Valobasha.      <br />
+                    Bondhu Mane Jhoro Hawa Bristy Veja Shur,    <br />
+                    Bondhu Mane Mon Pari Dey dur Bohudur.       <br /><br />
+
+                    Friend Mane, Rater Akashe Choto Choto Tara,<br />
+                    Friend Mane Tomar Tane, Abar Ghore Fera,   <br />
+                    Friend Mane Koto Gan, Koto Shurer Mela,    <br />
+                    Friend Mane Hridoy Diye Khela.             <br /><br />
+
+                    Akaser prem shimahin..<br />
+                    Shagorer prem kulhin..<br /> “
+                    Pritibir prem chirodin<br />..
+                    Amar prem totodin.. “ <br />
+                    Tumi amake bondhu kore Rakhbe jotodin..
+                </h1>               
+            </div>
+        </div>
+    </section>
+
+    <section id="lower" data-animation-container>
+        <h1 data-animation="fadeIn" data-animation-child>
+            <strong><i>PHOTO GALLERY</i></strong>
+        </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="1500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="2500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="1500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="2500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="1500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="2500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="1500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="2500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="1500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="2500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="1500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-4" data-animation-child data-animation="fadeInUp" data-animation-delay="2500ms">
+                    <img src="../../Content/Images/9.jpg" alt="" class="img-responsive center-block">
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>       
+    </section>
+
+    <script type="text/javascript">
+        (function () {
+            var $containers = $('[data-animation]:not([data-animation-child]), [data-animation-container]');
+            $containers.scrollAnimations();
+        }());
+    </script>
+

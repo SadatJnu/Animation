@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Clock";
+}
+
+
+<link href="~/Content/clock.css" rel="stylesheet" />
+<script src="~/Scripts/show_ads.js"></script>
+<script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+
+
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+        }               
+    </style>
+
+<body>   
+    <div class='iasClockDiv'>
+        <canvas class='iasClockCanvas' id='iasClockCanvas' width='400px' height='400px'></canvas>
+        <div class='shadow-element'></div>       
+    </div>
+
+    <script src="~/Scripts/clock.js"></script>
+
+    <script>
+        const data = [['09:53', '10:30', 'Meeting 1'], ['14:30', '15:30', 'Meeting 2'], ['15:53', '16:30', 'Meeting 3']]
+        startClock(data, true);
+    </script>
+   
+</body>

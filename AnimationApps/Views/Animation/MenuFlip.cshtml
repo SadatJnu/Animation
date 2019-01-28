@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "MenuFlip";
+}
+
+<link href="~/Content/MenuFlip.css" rel="stylesheet" />
+
+    <div id="viewport">
+        <div id="card">
+            <div id="front">
+                <!--front content start-->
+                <div class="power"></div>
+                <div class="powerdown"></div>
+                <!--front content end-->
+            </div>
+            <div id="back">
+                <!--back content start-->
+                <ul class="mainmenu">
+                    <li><img src="../../Content/Images/palette.png" alt="Palette icon" class="icon"><span>Themes</span></li>
+                    <ul class="submenu">
+                        <div class="expand-triangle"><img src="../../Content/Images/expand.png"></div>
+                        <li id="theme1" class="chosen"><span>Blue</span></li>
+                        <li id="theme2"><span>Teal</span></li>
+                    </ul>
+                    <li><img src="../../Content/Images/user.png" alt="User icon" class="icon"><span>Account<span></li>
+                    <ul class="submenu">
+                        <div class="expand-triangle"><img src="../../Content/Images/expand.png"></div>
+                        <li><span>About</span></li>
+                        <li><span>Picture</span></li>
+                        <li><span>Email</span></li>
+                        <li><span>Website</span></li>
+                    </ul>
+                    <li><img src="../../Content/Images/envelope.png" alt="Envelope icon" class="icon"><span>Messages</span><div class="messages">23</div></li>
+                    <ul class="submenu">
+                        <div class="expand-triangle"><img src="../../Content/Images/expand.png"></div>
+                        <li><span>Inbox</span></li>
+                        <li><span>Draft</span></li>
+                        <li><span>Sent</span></li>
+                        <li><span>Trash</span></li>
+                    </ul>
+                    <li><img src="../../Content/Images/cog.png" alt="Cog icon" class="icon"><span>Settings</span></li>
+                    <ul class="submenu">
+                        <div class="expand-triangle"><img src="../../Content/Images/expand.png"></div>
+                        <li><span>Password</span></li>
+                        <li><span>Notifications</span></li>
+                        <li><span>Language</span></li>
+                        <li><span>Privacy</span></li>
+                        <li><span>Payments</span></li>
+                    </ul>
+                    <li><img src="../../Content/Images/key.png" alt="Key icon" class="icon"><span>Logout</span></li>
+                </ul>
+                <!--back content end-->
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/MenuFlip.js"></script>
+    <script src="~/Scripts/MenuFlip_retina.min.js"></script>
+
+
