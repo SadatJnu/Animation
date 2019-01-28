@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{072F0408-DF75-4E76-A183-AD5A894D24EA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnimationApps</RootNamespace>
+    <AssemblyName>AnimationApps</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AccordionStyle.css" />
+    <Content Include="Content\ButtonsLinkstyle.css" />
+    <Content Include="Content\CanvasMenu_normalize.css" />
+    <Content Include="Content\circlemenu.css" />
+    <Content Include="Content\clock.css" />
+    <Content Include="Content\ColumnFilter_bootstrap.css" />
+    <Content Include="Content\DropdownMenu.css" />
+    <Content Include="Content\FlipImage.css" />
+    <Content Include="Content\FlipImage_jquery.flipster.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\formbox.css" />
+    <Content Include="Content\Images\162.png" />
+    <Content Include="Content\Images\9.jpg" />
+    <Content Include="Content\Images\cog.png" />
+    <Content Include="Content\Images\envelope.png" />
+    <Content Include="Content\Images\expand.png" />
+    <Content Include="Content\Images\facebook.png" />
+    <Content Include="Content\Images\google.png" />
+    <Content Include="Content\Images\icon-music.png" />
+    <Content Include="Content\Images\icon-people.png" />
+    <Content Include="Content\Images\icon-picture.png" />
+    <Content Include="Content\Images\icon-place.png" />
+    <Content Include="Content\Images\icon-sleep.png" />
+    <Content Include="Content\Images\icon-thought.png" />
+    <Content Include="Content\Images\key.png" />
+    <Content Include="Content\Images\linked.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\main-nav-animals%402x.png" />
+    <Content Include="Content\Images\main-nav-earth%402x.png" />
+    <Content Include="Content\Images\main-nav-electricity%402x.png" />
+    <Content Include="Content\Images\main-nav-evolution%402x.png" />
+    <Content Include="Content\Images\main-nav-forces%402x.png" />
+    <Content Include="Content\Images\main-nav-habitats%402x.png" />
+    <Content Include="Content\Images\main-nav-light%402x.png" />
+    <Content Include="Content\Images\main-nav-materials%402x.png" />
+    <Content Include="Content\Images\main.png" />
+    <Content Include="Content\Images\messages.png" />
+    <Content Include="Content\Images\palette.png" />
+    <Content Include="Content\Images\plus.png" />
+    <Content Include="Content\Images\powerdown.png" />
+    <Content Include="Content\Images\powerup.png" />
+    <Content Include="Content\Images\social.png" />
+    <Content Include="Content\Images\texture-bg.png" />
+    <Content Include="Content\Images\tooltip_ao.png" />
+    <Content Include="Content\Images\twitter.png" />
+    <Content Include="Content\Images\user.png" />
+    <Content Include="Content\Images\wood3.jpg" />
+    <Content Include="Content\Images\wooden8.png" />
+    <Content Include="Content\Images\woodenboard2.jpg" />
+    <Content Include="Content\Images\youtube.png" />
+    <Content Include="Content\Loadingmodal-animate.css" />
+    <Content Include="Content\Loadingmodal.css" />
+    <Content Include="Content\MenuBarsgoogleapis.css" />
+    <Content Include="Content\MenuBarsPopup-plugin.css" />
+    <Content Include="Content\MenuBarsPopupAdded.css" />
+    <Content Include="Content\MenuBarsStyle.css" />
+    <Content Include="Content\MenuBarStyle.css" />
+    <Content Include="Content\MenuFlip.css" />
+    <Content Include="Content\mobiMenu.css" />
+    <Content Include="Content\PieMenu.css" />
+    <Content Include="Content\RadialMenu.css" />
+    <Content Include="Content\ScrollAnimation.min.css" />
+    <Content Include="Content\animationCanvas.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CanvasAnimation.css" />
+    <Content Include="Content\ColorStyle.css" />
+    <Content Include="Content\CustomAnimation.css" />
+    <Content Include="Content\FinishStyle.css" />
+    <Content Include="Content\Images\2.jpg" />
+    <Content Include="Content\Images\3.jpg" />
+    <Content Include="Content\Images\4.jpg" />
+    <Content Include="Content\Images\5.jpg" />
+    <Content Include="Content\Images\6.jpg" />
+    <Content Include="Content\Images\7.jpg" />
+    <Content Include="Content\Images\8.jpg" />
+    <Content Include="Content\Images\download.jpg" />
+    <Content Include="Content\Images\images.jpg" />
+    <Content Include="Content\Images\leaves1.jpg" />
+    <Content Include="Content\Images\leaves2.jpg" />
+    <Content Include="Content\Images\leaves3.jpg" />
+    <Content Include="Content\Images\leaves4.jpg" />
+    <Content Include="Content\jquery.canvas-animation.css" />
+    <Content Include="Content\jquerysctipttop.css" />
+    <Content Include="Content\MultipleEffects.min.css" />
+    <Content Include="Content\FinishRobotoFontFamily.css" />
+    <Content Include="Content\Sidebar.css" />
+    <Content Include="Content\SideNavAnimate.css" />
+    <Content Include="Content\SideNavApp.css" />
+    <Content Include="Content\SideNavGoogleRobotFont.css" />
+    <Content Include="Content\sideNavi.css" />
+    <Content Include="Content\SideNav_fullpage.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\CustomIndex.css" />
+    <Content Include="Content\Parallax.css" />
+    <Content Include="Content\Parollerstyle.css" />
+    <Content Include="Content\swiper.min.css" />
+    <Content Include="Content\ThreeDMenuBarstyle.css" />
+    <Content Include="Content\TypeTextShadowStyle.css" />
+    <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ButtonsLinkscript.js" />
+    <Content Include="Scripts\CanvasAnimation.js" />
+    <Content Include="Scripts\circlemenu.js" />
+    <Content Include="Scripts\CircleMenu_lodash.min.js" />
+    <Content Include="Scripts\circlemenu_site.js" />
+    <Content Include="Scripts\clippath.min.js" />
+    <Content Include="Scripts\clock.js" />
+    <Content Include="Scripts\columnfilter_jquery.-0.0.1.js" />
+    <Content Include="Scripts\DockMenu.js" />
+    <Content Include="Scripts\EditableTable.js" />
+    <Content Include="Scripts\EditableTable_popper.min.js" />
+    <Content Include="Scripts\FlipImage_jquery.flipster.min.js" />
+    <Content Include="Scripts\formbox.js" />
+    <Content Include="Scripts\FormBox_jquery-1.4.2.js" />
+    <Content Include="Scripts\MenuFlip.js" />
+    <Content Include="Scripts\MenuFlip_retina.min.js" />
+    <Content Include="Scripts\mobiMenu.min.js" />
+    <Content Include="Scripts\modernizr.min.js" />
+    <Content Include="Scripts\RadialMenu.js" />
+    <Content Include="Scripts\SideNav_jquery-1.12.4.min.js" />
+    <Content Include="Scripts\Loadingmodal.js" />
+    <Content Include="Scripts\MenuBarsjquery-3.2.1.min.js" />
+    <Content Include="Scripts\MenuBarsjquery-ui.min.js" />
+    <Content Include="Scripts\MenuBarsPopup-plugin.js" />
+    <Content Include="Scripts\MenuBarsPopup.js" />
+    <Content Include="Scripts\Parollerbuttons.js" />
+    <Content Include="Scripts\fontawesome.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\CanvasAnimation_jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.canvas-animation.bundle.js" />
+    <Content Include="Scripts\jquery.flying-circles.js" />
+    <Content Include="Scripts\jquery.paroller.js" />
+    <Content Include="Scripts\jquery.scrollAnimations.js" />
+    <Content Include="Scripts\Christmas_jquery.snow.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LetterBall_alphabet.js" />
+    <Content Include="Scripts\LetterBall_bubbles.js" />
+    <Content Include="Scripts\LetterBall.js" />
+    <Content Include="Scripts\CanvasAnimationscripts.js" />
+    <Content Include="Scripts\MultipleEffects.min.js" />
+    <Content Include="Scripts\Paroller.js" />
+    <Content Include="Scripts\show_ads.js" />
+    <Content Include="Scripts\Parallax.min.js" />
+    <Content Include="Scripts\SideNav.js" />
+    <Content Include="Scripts\SideNav_fullpage.min.js" />
+    <Content Include="Scripts\SideNav_TweenMax.min.js" />
+    <Content Include="Scripts\swiper.min.js" />
+    <Content Include="Scripts\ThreeDMenuBarmakisu.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Animation\Index.cshtml" />
+    <Content Include="Views\Animation\ShadowBox.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AnimationController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Animation\TypeText.cshtml" />
+    <Content Include="Views\Animation\TypeTextShadow.cshtml" />
+    <Content Include="Views\Animation\HelloWorld.cshtml" />
+    <Content Include="Views\Animation\ImageSlide.cshtml" />
+    <Content Include="Views\Animation\Color.cshtml" />
+    <Content Include="Views\Animation\LetterBall.cshtml" />
+    <Content Include="Views\Animation\MultipleEffects.cshtml" />
+    <Content Include="Views\Animation\Parallax.cshtml" />
+    <Content Include="Views\Animation\ScrollAnimation.cshtml" />
+    <Content Include="Views\Animation\FlyingCircle.cshtml" />
+    <Content Include="Views\Animation\Paroller.cshtml" />
+    <Content Include="Views\Animation\CanvasAnimation.cshtml" />
+    <Content Include="Views\Animation\Finish.cshtml" />
+    <Content Include="Views\Animation\Christmas.cshtml" />
+    <Content Include="Views\Animation\Accordion.cshtml" />
+    <Content Include="Views\Animation\Navbar.cshtml" />
+    <Content Include="Views\Animation\MenuBar.cshtml" />
+    <Content Include="Views\Animation\MenuBars.cshtml" />
+    <Content Include="Views\Animation\EditableTable.cshtml" />
+    <Content Include="Views\Animation\Clock.cshtml" />
+    <Content Include="Views\Animation\ThreeDMenuBar.cshtml" />
+    <Content Include="Views\Animation\ClipPath.cshtml" />
+    <Content Include="Views\Animation\ButtonsLink.cshtml" />
+    <Content Include="Views\Animation\DockMenu.cshtml" />
+    <Content Include="Views\Animation\Loading.cshtml" />
+    <Content Include="Views\Animation\SideNav.cshtml" />
+    <Content Include="Views\Animation\FormBox.cshtml" />
+    <Content Include="Views\Animation\Navigation.cshtml" />
+    <Content Include="Views\Animation\FlipImage.cshtml" />
+    <Content Include="Views\Animation\ColumnFilter.cshtml" />
+    <Content Include="Views\Animation\PieMenu.cshtml" />
+    <Content Include="Views\Animation\CircleMenu.cshtml" />
+    <Content Include="Views\Animation\MobiMenu.cshtml" />
+    <Content Include="Views\Animation\MenuFlip.cshtml" />
+    <Content Include="Views\Animation\Sidebar.cshtml" />
+    <Content Include="Views\Animation\CanvasMenu.cshtml" />
+    <Content Include="Views\Animation\RadialMenu.cshtml" />
+    <Content Include="Views\Animation\DropdownMenu.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61536</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61536/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
